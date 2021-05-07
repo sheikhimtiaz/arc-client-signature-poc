@@ -1,0 +1,19 @@
+node1       0x58B3d77f025E5961a782C41CDA1620ce203B3ef9
+passcode    selise12345678
+
+
+node2       0x0772c02Dde9b6Df94a10022c354FfBa520a309C9
+passcode    selise12345678
+
+
+
+enode://8c77b043db3c8f4aee7d294e2121dd9ce9f477aaabb1578562ba872cbb0614e9e5c6e62a7b16609878b6d8ca1a830cc044b2a8b0a773ed69bfcdad6a130f6284@127.0.0.1:0?discport=30301
+Note: you're using cmd/bootnode, a developer tool.
+We recommend using a regular node as bootstrap node for production deployments.
+INFO [04-05|19:51:20.690] New local node record                    seq=1 id=42dd04813a9b75aa ip=<nil> udp=0 tcp=0
+
+geth --networkid 14333 --datadir "./data" --bootnodes enode://8c77b043db3c8f4aee7d294e2121dd9ce9f477aaabb1578562ba872cbb0614e9e5c6e62a7b16609878b6d8ca1a830cc044b2a8b0a773ed69bfcdad6a130f6284@127.0.0.1:30301 --port 30303 --ipcdisable --syncmode full --rpc --allow-insecure-unlock --rpccorsdomain "*" -rpcport 8545 --unlock 0x58B3d77f025E5961a782C41CDA1620ce203B3ef9 --password password.txt --mine console
+
+
+geth --networkid 14333 --datadir "./data" --bootnodes enode://8c77b043db3c8f4aee7d294e2121dd9ce9f477aaabb1578562ba872cbb0614e9e5c6e62a7b16609878b6d8ca1a830cc044b2a8b0a773ed69bfcdad6a130f6284@127.0.0.1:30301 --port 30304 --ipcdisable --syncmode full --rpc --allow-insecure-unlock --rpccorsdomain "*" -rpcport 8546 --unlock 0x0772c02Dde9b6Df94a10022c354FfBa520a309C9 --password password.txt console
+
