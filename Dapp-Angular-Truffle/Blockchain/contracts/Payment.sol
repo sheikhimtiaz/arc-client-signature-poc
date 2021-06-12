@@ -1,23 +1,23 @@
 pragma solidity 0.8.4;
 
 contract Payment {
-    address origenTransferencia;
-    address payable destinoTransferencia;
-    uint montoTransferencia;
+    address transferSource;
+    address payable transferDestination;
+    uint transferAmount;
     
     constructor() public {
-        origenTransferencia = msg.sender;
+        transferSource = msg.sender;
     }
 
-    event TransferirMonto(address payable _destinoTransferencia, address _origenTransferencia, uint montoTransferencia);
+    event ExecuteTransfer(address payable _transferDestination, address _transferSource, uint _transferAmount);
     
-    function nuevaTransaccion(address payable _destinoTransferencia) public payable returns (bool){
-        destinoTransferencia = _destinoTransferencia;
-        destinoTransferencia.transfer(msg.value);
-        emit TransferirMonto(destinoTransferencia, origenTransferencia, msg.value);
+    function newTransaction(address payable _transferDestination) public payable returns (bool){
+        transferDestination = _transferDestination;
+        transferDestination.transfer(msg.value);
+        emit ExecuteTransfer(transferDestination, transferSource, msg.value);
         return true;
     }
-    function verBalanceCuenta() public payable returns (uint) {
-        return origenTransferencia.balance;
+    function seeAccountBalance() public payable returns (uint) {
+        return transferSource.balance;
     }
 }
