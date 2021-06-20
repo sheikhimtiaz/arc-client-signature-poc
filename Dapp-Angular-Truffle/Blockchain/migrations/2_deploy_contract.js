@@ -1,5 +1,5 @@
-const Payment = artifacts.require("Payment");
+const Vstorage = artifacts.require("Vstorage");
 
 module.exports = function(deployer) {
-  deployer.deploy(Payment);
+  deployer.deploy(Vstorage);
 };
