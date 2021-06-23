@@ -1,5 +1,5 @@
-const Vstorage = artifacts.require("Vstorage");
+const Document = artifacts.require("Document");
 
 module.exports = function(deployer) {
-  deployer.deploy(Vstorage);
+  deployer.deploy(Document);
 };

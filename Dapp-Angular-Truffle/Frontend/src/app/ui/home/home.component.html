@@ -1,20 +1,37 @@
 <div class="body">
-  <mat-card class="register">
-    <p>Thanks for downloading, if you liked don't forget to leave a star on github.
+    <mat-card class="register">
+        <p>Thanks for downloading, if you liked don't forget to leave a star on github.
 
-    </p>
+        </p>
 
-    <div style="text-align:center">
-      <button mat-raised-button dark class="big-round-shape-button black" (click)="GiveStar()">
-        <mat-icon>
-          <img height="20" src="../../../assets/github.svg">
-        </mat-icon>
-        Star Repo</button>
-      <h1>
-        <img class="logo" src="assets/angular.png" alt="logo_angular">Angular
-        +
-        <img class="logo" src="assets/truffle.png" alt="logo_truffle">Truffle = ÐAPP</h1>
-    </div>
+        <div style="text-align:center">
+            <div>
+                <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+                    <a className="navbar-brand col-sm-3 col-md-2 mr-0" href="http://www.dappuniversity.com/bootcamp"
+                        target="_blank" rel="noopener noreferrer">
+                        Meme of the Day
+                    </a>
+                </nav>
+                <div className="container-fluid mt-5">
+                    <div className="row">
+                        <main role="main" className="col-lg-12 d-flex text-center">
+                            <div className="content mr-auto ml-auto">
+                                <a href="http://www.dappuniversity.com/bootcamp" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <!-- <img src={`https://ipfs.infura.io/ipfs/${this.state.memeHash}`} /> -->
+                                </a>
+                                <p>&nbsp;</p>
+                                <h2>Change Meme</h2>
+                                <form onSubmit="uploadFile()">
+                                    <label for="file">Choose File</label>
+                                    <input type="file" (change)="handleFileInput($event.target.files)">
+                                </form>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  </mat-card>
+    </mat-card>
 </div>
